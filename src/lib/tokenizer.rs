@@ -43,7 +43,7 @@ impl<'a> Iterator for Tokenizer<'a> {
             Some('(') => Some(Token::LParen),
             Some(')') => Some(Token::RParen),
             None => Some(Token::EOF),
-            Some(_) => None,
+            Some(_) => Some(Token::None),
         }
     }
 }
